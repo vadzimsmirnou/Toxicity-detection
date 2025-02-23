@@ -14,6 +14,7 @@ Metric: F1
   - sentence-transformers (SBERT)
 
 ## 📊 Dataset
+Link for downloading data: https://code.s3.yandex.net/datasets/toxic_comments.csv
 The dataset `toxic_comments.csv` is used, containing comment texts and a binary toxicity label:
 - `text` — comment text
 - `toxic` — label (0 — non-toxic, 1 — toxic)
