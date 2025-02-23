@@ -1,80 +1,63 @@
 # Toxic Comments Detection
 
-## 📌 Описание проекта
+## 📌 Project Description
+This project focuses on predicting the toxicity of comments using Natural Language Processing (NLP) and Machine Learning (ML) techniques. Various approaches, including TF-IDF and Sentence BERT, were tested, along with several classification algorithms.
+Metric: F1
 
-Проект посвящен предсказанию токсичности комментариев с использованием методов обработки естественного языка (NLP) и машинного обучения (ML). В рамках работы были протестированы различные подходы, включая TF-IDF и Sentence BERT, а также несколько алгоритмов классификации.
-
-## 🔧 Технологии
-
-- **Языки программирования**: Python
-- **Библиотеки**:
-  - pandas, numpy, seaborn, matplotlib (анализ данных и визуализация)
-  - nltk (предобработка текста)
-  - scikit-learn (машинное обучение)
-  - lightgbm (градиентный бустинг)
+## 🔧 Technologies
+- **Programming Languages**: Python
+- **Libraries**:
+  - pandas, numpy, seaborn, matplotlib (data analysis and visualization)
+  - nltk (text preprocessing)
+  - scikit-learn (machine learning)
+  - lightgbm (gradient boosting)
   - sentence-transformers (SBERT)
 
-## 📊 Данные
+## 📊 Dataset
+The dataset `toxic_comments.csv` is used, containing comment texts and a binary toxicity label:
+- `text` — comment text
+- `toxic` — label (0 — non-toxic, 1 — toxic)
 
-Используется датасет `toxic_comments.csv`, содержащий тексты комментариев и бинарную метку токсичности:
+## 📌 Approach
+1. **Data Preprocessing**
+   - Text cleaning
+   - Lemmatization
+   - Stopword removal
 
-- `text` — текст комментария
-- `toxic` — метка (0 — нетоксичный, 1 — токсичный)
-
-## 📌 Подход к решению
-
-1. **Предобработка данных**
-
-   - Очистка текста
-   - Лемматизация
-   - Удаление стоп-слов
-
-2. **Векторизация текста**
-
+2. **Text Vectorization**
    - TF-IDF
    - Sentence BERT (SBERT)
 
-3. **Обучение моделей**
+3. **Model Training**
+   - Logistic Regression
+   - Naive Bayes (MultinomialNB, GaussianNB)
+   - Gradient Boosting (LightGBM)
 
-   - Логистическая регрессия
-   - Наивный Байес (MultinomialNB, GaussianNB)
-   - Градиентный бустинг (LightGBM)
+4. **Model Evaluation**
+   - Metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
+   - Model comparison using TF-IDF and SBERT
 
-4. **Оценка моделей**
-
-   - Метрики: Accuracy, Precision, Recall, F1-score, ROC-AUC
-   - Сравнение моделей на основе TF-IDF и SBERT
-
-## 📈 Результаты
-
-Лучшие показатели F1-score показала модель **TF-IDF + градиентный бустинг**:
-
+## 📈 Results
+The best F1-score was achieved using **TF-IDF + Gradient Boosting**:
 - **F1-score**: 0.7703
 - **Accuracy**: 0.9596
 - **ROC-AUC**: 0.9642
 
-Модель с Sentence BERT также показала конкурентоспособные результаты.
-
-## 🚀 Запуск проекта
-
-1. Установите зависимости:
+## 🚀 Running the Project
+1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-2. Запустите Jupyter Notebook и откройте `toxic_comments_detection.ipynb`
-3. Выполните ячейки по порядку
+2. Open Jupyter Notebook and launch `toxic_comments_detection.ipynb`
+3. Execute the cells in order
 
-## 📌 Выводы
-
-- Лемматизация и удаление стоп-слов улучшают качество модели
-- TF-IDF + градиентный бустинг дает наилучшие результаты
-- Использование Sentence BERT открывает перспективы для улучшения предсказаний
-
-## 📜 Лицензия
-
-Этот проект распространяется под лицензией MIT.
+## 📌 Conclusions
+- Lemmatization and stopword removal improve model performance
+- TF-IDF + Gradient Boosting provides the best results
+- Using Sentence BERT for creating vector representation opens new opportunities for further improvements
 
 ---
+**Author:** [vadzimsmirnou]
 
-**Автор:** [Твой никнейм]
+
 
